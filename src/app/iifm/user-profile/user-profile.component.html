@@ -1,0 +1,77 @@
+<app-mis-header></app-mis-header>
+<div class="app-body">
+  <app-mis-sidebar></app-mis-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+      <app-breadcrumb></app-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" href="#"><i class="icon-speech"></i></a>
+          <a class="btn" routerLink="/dashboard"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </ol>
+    <div class="container-fluid">
+      <div class="animated fadeIn">
+       
+         <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <a class="fa fa-plus btn btn-primary" routerLink="/user-profile/add"> ADD Profile</a>
+              </div>
+              <div class="card-body">
+                <table class="table"  >
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Date of Joining</th>
+                      <th>Date of Birth</th>
+                      <th>Status</th>
+                      <th>Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let users of user_details">
+                    <tr>
+                      <td>{{users.firstname}}</td>
+                      <td>{{users.lastname}}</td>
+                      <td>{{users.mobile}}</td>
+                      <td>{{users.doj}}</td>
+                      <td>{{users.dob}}</td>
+                      <td>{{users.status}}</td>
+                      <td><a class="btn btn-primary fa fa-pencil" ></a></td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      
+    </div><!-- /.container-fluid -->
+  </main>
+  <app-mis-right-sidebar></app-mis-right-sidebar>
+</div>
+<app-mis-footer></app-mis-footer>
+
+

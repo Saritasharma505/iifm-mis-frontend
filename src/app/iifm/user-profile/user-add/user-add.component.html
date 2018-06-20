@@ -1,0 +1,430 @@
+<app-mis-header></app-mis-header>
+<div class="app-body">
+  <app-mis-sidebar></app-mis-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+      <app-breadcrumb></app-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" href="#"><i class="icon-speech"></i></a>
+          <a class="btn" routerLink="/dashboard"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </ol>
+    <div class="container-fluid">
+        <form (ngSubmit)="onSubmit(empForm)" #empForm="ngForm">
+                     
+
+          <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <strong>Official Information</strong> 
+                  </div>
+                  <div class="card-body">                    
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="text-input">Full Name</label>
+                            <div class="col-md-9">
+                            <input type="text" id="efname" name="efname" ngModel  class="form-control" placeholder="Full Name">
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="email-input">Email ID </label>
+                        <div class="col-md-9">
+                          <input type="email" id="elname" name="elname" ngModel  class="form-control" placeholder="Enter Email (Only Office Email Id)">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="email-input">Date Of Joining </label>
+                          <div class="col-md-9">
+                              <div class="input-group">
+                                  <span class="input-group-prepend">
+                                  <span class="input-group-text">
+                                  <i class="fa fa-calendar"></i>
+                                  </span>
+                                  </span>
+                                  <input type="date" name="doj" ngModel  class="form-control" id="doj" placeholder="DD/MM/YYYY">
+                                </div>
+                          </div>
+                      </div>
+    
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="">Designation</label>
+                        <div class="col-md-9">
+                          <input type="text" id="designation" name="designation" ngModel class="form-control" placeholder="Designation" >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="">Department</label>
+                          <div class="col-md-9">
+                            <input type="text" id="dept" name="dept" ngModel class="form-control" placeholder="Department" >
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Location</label>
+                            <div class="col-md-9">
+                              <input type="text" id="locationcentre" name="locationcentre" ngModel class="form-control" placeholder="Location/Center" >
+                            </div>
+                          </div>
+                  </div>
+                  <div class="col-md-12">
+                 
+                      <div class="card-header">
+                        <strong>Professional Information</strong>
+                      </div>
+                      <div class="form-group row" style="margin-top: 10px;">
+                          <label class="col-md-3 col-form-label" for="">Company Name</label>
+                          <div class="col-md-9">
+                            <input type="text" id="company" name="company" ngModel class="form-control" placeholder="Company Name" >
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Designation</label>
+                            <div class="col-md-9">
+                              <input type="text" id="designation1" name="designation1" ngModel class="form-control" placeholder="Designation" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">From </label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </span>
+                                    <input type="date" name="fromdate" ngModel class="form-control" id="fromdate" placeholder="DD/MM/YYYY">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">To </label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </span>
+                                    <input type="date" class="form-control" name="todate" ngModel id="todate" placeholder="DD/MM/YYYY">
+                                  </div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="col-md-12">
+                 
+                      <div class="card-header">
+                        <strong>Educational Information</strong>
+                      </div>
+                      
+                      <div class="form-group row" style="margin-top: 10px;">
+                          <label class="col-md-3 col-form-label" for="">Post Graduation Degree</label>
+                          <div class="col-md-9">
+                            <input type="text" id="postgradegree" name="postgradegree" ngModel class="form-control" placeholder="Post Graduation Degree" >
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Year</label>
+                            <div class="col-md-9">
+                              <input type="text" id="postgrayear" name="postgrayear" ngModel class="form-control" placeholder="Year" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Percentage (%)</label>
+                            <div class="col-md-9">
+                              <input type="text" id="postgrapercentage" name="postgrapercentage" ngModel class="form-control" placeholder="Percentage (%)" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Collage/University</label>
+                            <div class="col-md-9">
+                              <input type="text" id="postgracoll" name="postgracoll" ngModel class="form-control" placeholder="Collage/University" >
+                            </div>
+                        </div>
+                      
+                        <div class="col-md-12"><hr style="border-bottom:1px solid #ccc; width:100%; margin-top: 30px;"></div>
+                        
+                        <div class="form-group row" style="margin-top: 10px;">
+                            <label class="col-md-3 col-form-label" for="">Graduation Degree</label>
+                            <div class="col-md-9">
+                              <input type="text" id="gradegree" name="gradegree" ngModel class="form-control" placeholder="Graduation Degree" >
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Year</label>
+                              <div class="col-md-9">
+                                <input type="text" id="grayear" name="grayear" ngModel class="form-control" placeholder="Year" >
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Percentage (%)</label>
+                              <div class="col-md-9">
+                                <input type="text" id="grapercentage" name="grapercentage" ngModel class="form-control" placeholder="Percentage (%)" >
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Collage/University</label>
+                              <div class="col-md-9">
+                                <input type="text" id="gracoll" name="gracoll" ngModel class="form-control" placeholder="Collage/University" >
+                              </div>
+                          </div>
+
+                          <div class="col-md-12"><hr style="border-bottom:1px solid #ccc; width:100%; margin-top: 30px;"></div>
+
+                          <div class="form-group row" style="margin-top: 10px;">
+                              <label class="col-md-3 col-form-label" for="">12th School Name</label>
+                              <div class="col-md-9">
+                                <input type="text" id="12thschname" name="12thschname" ngModel class="form-control" placeholder="12th School Name" >
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="">Year</label>
+                                <div class="col-md-9">
+                                  <input type="text" id="12thschyear" name="12thschyear" ngModel class="form-control" placeholder="Passing Year" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="">Percentage (%)</label>
+                                <div class="col-md-9">
+                                  <input type="text" id="12thschpercent" name="12thschpercent" ngModel class="form-control" placeholder="Percentage (%)" >
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-12"><hr style="border-bottom:1px solid #ccc; width:100%; margin-top: 30px;"></div>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <label class="col-md-3 col-form-label" for="">10th School Name</label>
+                                <div class="col-md-9">
+                                  <input type="text" id="10thschname" name="10thschname" ngModel class="form-control" placeholder="10th School Name" >
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="">Year</label>
+                                  <div class="col-md-9">
+                                    <input type="text" id="10thschyear" name="10thschyear" ngModel class="form-control" placeholder="Passing Year" >
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="">Percentage (%)</label>
+                                  <div class="col-md-9">
+                                    <input type="text" id="10thschpercent" name="10thschpercent" ngModel class="form-control" placeholder="Percentage (%)" >
+                                  </div>
+                              </div>
+                             
+                  </div>
+                 
+                  <div class="col-md-12" >
+                 
+                      <div class="card-header">
+                        <strong>Personal Information</strong>
+                      </div>
+                      <div class="form-group row" style="margin-top: 10px;">
+                          <label class="col-md-3 col-form-label" for="">Gender</label>
+                          <div class="col-md-9">
+                            <select id="gender" name="gender" ngModel class="form-control">
+                              <option>Please select Gender</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="">Date Of Birth </label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </span>
+                                    <input type="date" class="form-control" name="dob" ngModel id="dob" placeholder="DD/MM/YYYY">
+                                  </div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="col-md-12">
+                 
+                      <div class="card-header">
+                        <strong>Contact Information</strong>
+                      </div>
+                      <div class="panel-body">
+                        
+                          <div class="col-md-12" style="margin-top: 15px;"><strong>Current Address</strong></div>
+                         
+                          <div class="form-group row" >
+                              <label class="col-md-3 col-form-label" for="">Address</label>
+                              <div class="col-md-9">
+                                  <textarea id="cadd" name="cadd" ngModel rows="3" class="form-control" placeholder="Street Address"></textarea>                              </div>
+                          </div>  
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="disabled-input">Current City</label>
+                              <div class="col-md-9">
+                                <input type="text" id="ccity" name="ccity" ngModel class="form-control" placeholder="Current City" >
+                              </div>
+                          </div>                          
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="disabled-input">Current State</label>
+                              <div class="col-md-9">
+                                <input type="text" id="cstate" name="cstate" ngModel class="form-control" placeholder="Current State" >
+                              </div>
+                          </div>                          
+                          <div class="col-md-12" style="margin-top: 20px;"><hr style="border-bottom:1px solid #ccc; width:100%;"></div>
+                          
+                          
+                          <div class="col-md-12" style="margin-top: 10px;" style="margin-top: 8px;"><strong>Parmanent Address</strong></div>
+                          <div class="col-md-12" style="margin-top: 8px;"><input type="checkbox" style="width:20px; margin-right:10px; height:20px; float:left" id="perascur" name="perascur" value=""> Checked if Same as Current</div>                        
+                          <div class="col-md-12"  style="padding:0;">
+                              <div class="form-group row" >
+                                  <label class="col-md-3 col-form-label" for="">Address</label>
+                                  <div class="col-md-9">
+                                      <textarea id="textarea-input" name="padd" ngModel id="padd" rows="3" class="form-control" placeholder="Street Address"></textarea>                              </div>
+                              </div>  
+                          
+                              <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="t">Current City</label>
+                                  <div class="col-md-9">
+                                    <input type="text" id="pcity" name="pcity" ngModel class="form-control" placeholder="Current City" >
+                                  </div>
+                              </div>  
+                          
+                              <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="">Current State</label>
+                                  <div class="col-md-9">
+                                    <input type="text" id="pstate" name="pstate" ngModel class="form-control" placeholder="Current State" >
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="t">Contact Number</label>
+                              <div class="col-md-9">
+                                <input type="text" id="mobile" name="mobile" ngModel class="form-control" placeholder="Contact Number" >
+                              </div>
+                          </div>                          
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="t">Alternate Contact Number</label>
+                              <div class="col-md-9">
+                                <input type="text" id="altno" name="altno" ngModel class="form-control" placeholder="Alternate Contact Number" >
+                              </div>
+                          </div>                      
+                      </div>  
+                      
+                  </div>
+                  <div class="col-md-12">
+                 
+                      <div class="card-header">
+                        <strong>Family Information</strong>
+                      </div>
+                      <div class="panel-body" style="margin-top: 15px;">
+                          <div class="col-md-12"><strong>Father Details</strong></div>
+                         
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="t">Father Name</label>
+                              <div class="col-md-9">
+                                <input type="text" id="fname" name="fname" ngModel class="form-control" placeholder="Father Name" >
+                              </div>
+                          </div>                         
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="t">Father's Occupation</label>
+                              <div class="col-md-9">
+                                <input type="text" id="foccup" name="foccup" ngModel class="form-control" placeholder="Father's Occupation" >
+                              </div>
+                          </div>                        
+                            <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Father's Contact Number</label>
+                              <div class="col-md-9">
+                                <input type="text" id="fcontact" name="fcontact" ngModel class="form-control" placeholder="Father's Contact Number" >
+                            </div>
+                          </div>                                               
+                          <div class="col-md-12"><hr style="border-bottom:1px solid #ccc; width:100%; margin-top: 30px;"></div>
+                          
+                          <div class="col-md-12" style="margin-top: 8px;"><strong>Mother Details</strong></div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Mother Name</label>
+                              <div class="col-md-9">
+                                <input type="text" id="mname" name="mname" ngModel class="form-control" placeholder="Mother Name" >
+                              </div>
+                          </div>                         
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Mother's Occupation</label>
+                              <div class="col-md-9">
+                                <input type="text" id="moccup" name="moccup" ngModel class="form-control" placeholder="Mother's Occupation" >
+                              </div>
+                          </div>                        
+                            <div class="form-group row">
+                              <label class="col-md-3 col-form-label" for="">Mother's Contact Number</label>
+                              <div class="col-md-9">
+                                <input type="text" id="mcontact" name="mcontact" ngModel class="form-control" placeholder="Mother's Contact Number" >
+                            </div>
+                          </div>      
+                                             
+                          <div class="col-md-12"><hr style="border-bottom:1px solid #ccc; width:100%;"></div>
+                          
+                          <div class="col-md-12" style="margin-top: 8px;"><strong>Marital Status</strong></div>
+                          <div class="form-group row" style="margin-top: 10px;">
+                              <label class="col-md-3 col-form-label" for="maritalstatus">Marital Status</label>
+                              <div class="col-md-9">
+                                <select id="maritalstatus" name="maritalstatus" ngModel class="form-control">
+                                  <option>Select Your Marital Status </option>
+                                  <option value="Single">Single</option>
+                                  <option value="Married">Married</option>
+                                </select>
+                              </div>
+                            </div>
+                          
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="">Spouse Name</label>
+                                <div class="col-md-9">
+                                  <input type="text" id="spname" name="spname" ngModel class="form-control" placeholder="Spouse Name" >
+                              </div>
+                            </div>                       
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="">Occupation</label>
+                                <div class="col-md-9">
+                                  <input type="text" id="spoccup" name="spoccup" ngModel class="form-control" placeholder="Occupation" >
+                              </div>
+                            </div>                             
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="">Marriage Anniversary Date </label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-prepend">
+                                        <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                        </span>
+                                        </span>
+                                        <input type="date" class="form-control" name="anniversary" ngModel id="anniversary" placeholder="DD/MM/YYYY">
+                                      </div>
+                                </div>
+                            </div>                          
+                        
+                          <div class="col-md-12" style="margin-top: 8px;"><hr style="border-bottom:1px solid #ccc; width:100%;"></div>
+                        
+                         <div class="col-md-12">
+                         <input class="form-control input-lg" type="checkbox" name="declaration" id="declaration" style="width:20px; margin-right:10px; height:20px; float:left" value="yes">I hereby confirm that the information given in this form is true &amp; correct to the best of my knowledge &amp; belief.<br><br>
+                        
+                          </div>
+                          </div>
+                  </div>
+                      <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                      </div>
+                  
+                  
+                </div>
+                
+              </div>
+            
+            </div><!--/.row-->
+      </form>
+    </div><!-- /.container-fluid -->
+  </main>
+  <app-mis-right-sidebar></app-mis-right-sidebar>
+</div>
+<app-mis-footer></app-mis-footer>
+
+
